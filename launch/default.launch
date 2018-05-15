@@ -1,0 +1,38 @@
+<launch>
+
+   <!-- Setup Script -->
+   <!--node name="setup" pkg="ada_launch" type="set_permissions.sh" /-->
+
+   <!-- the controller node itself -->
+   <node pkg="mico_hardware"
+          name="ros_control_kinova_mico"
+          type="mico_hardware"
+          output="screen" />
+
+   <!-- load controllers -->
+   <rosparam file="$(find ada_launch)/config/controllers.yaml" command="load" />
+
+   <node name="controller_spawner_started" pkg="controller_manager" type="spawner" respawn="false"
+      output="screen"
+      args="
+         joint_state_controller
+
+         " />
+   <node name="controller_spawner_stopped" pkg="controller_manager" type="spawner" respawn="false"
+      output="screen"
+      args="
+         --stopped
+         trajectory_controller
+         j2n6s200_hand_controller
+         " />
+
+   <!-- load ada urdf -->
+   <param name="robot_description"
+          command="cat $(find ada_description)/robots/ada.urdf"/>
+
+   <node pkg="robot_state_publisher" type="robot_state_publisher" name="rob_st_pub" />
+
+   <node name="static_transform" pkg="tf" type="static_transform_publisher" respawn="false" output="screen"
+      args="0 0 0 0 0 0 1 map world"/>
+
+</launch>
