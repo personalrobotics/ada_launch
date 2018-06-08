@@ -22,17 +22,24 @@
       output="screen"
       args="
          --stopped
-         trajectory_controller
+         move_until_touch_topic_controller
+        trajectory_controller
+        rewd_trajectory_controller
          j2n6s200_hand_controller
          " />
 
    <!-- load ada urdf -->
    <param name="robot_description"
-          command="cat $(find ada_description)/robots/ada.urdf"/>
+          command="cat $(find ada_description)/robots_urdf/ada_with_camera_forque.urdf"/>
 
    <node pkg="robot_state_publisher" type="robot_state_publisher" name="rob_st_pub" />
 
-   <node name="static_transform" pkg="tf" type="static_transform_publisher" respawn="false" output="screen"
-      args="0 0 0 0 0 0 1 map world"/>
+   <node name="st_map2world" pkg="tf" type="static_transform_publisher" respawn="false" output="screen"
+      args="0 0 0 0 0 0 1 map world 10"/>
+
+   <!-- static_transform_publisher x y z yaw pitch roll frame_id child_frame_id period_in_ms -->
+   <node name="st_joule2camera" pkg="tf" type="static_transform_publisher" respawn="false" output="screen"
+      args="0.1 -0.04 0.02 0 0 -1.57 j2n6s200_joule camera_link 10"/>
+
 
 </launch>

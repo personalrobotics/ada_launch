@@ -1,0 +1,19 @@
+<launch>
+  <node name="adaros_node" pkg="adaros" type="adaros_node" respawn="false" output="screen"/>
+
+  <!-- Load default ADA model -->
+  <group>
+    <param name="robot_description"
+           textfile="$(find ada_description)/robots/ada_with_camera_forque.urdf"/>
+    <param name="semantic_robot_description"
+           textfile="$(find ada_description)/robots/ada_with_camera_forque.srdf"/>
+  </group>
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+    respawn="false" output="screen">
+    <remap from="/joint_states" to="/adaros/ada/feedback/joint_state"/>
+  </node>
+
+  <node name="prl_ada_node" pkg="ada_launch" type="prl_ada_node" respawn="false" output="screen"/>
+
+</launch>
