@@ -33,6 +33,9 @@ trajectory_controller:
     j2n6s200_joint_5: {p: 3,  d: 0, i: 0, i_clamp: 1}
     j2n6s200_joint_6: {p: 3,  d: 0, i: 0, i_clamp: 1}
 
+# Optional controller that might be useful for testing.
+# Should do the same thing as trajectory_controller, but this is 
+# the lab's rewd_controllers implementation
 rewd_trajectory_controller:
   type: rewd_controllers/JointTrajectoryController
   joints: [j2n6s200_joint_1, j2n6s200_joint_2, j2n6s200_joint_3,
