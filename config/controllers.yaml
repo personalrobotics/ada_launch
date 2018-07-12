@@ -77,7 +77,7 @@ move_until_touch_topic_controller:
   forcetorque_wrench_name: /forque/forqueSensor
   forcetorque_tare_name: /forque/bias_controller/trigger
   sensor_force_limit: 50
-  sensor_torque_limit: 50
+  sensor_torque_limit: 5
   joints: [j2n6s200_joint_1, j2n6s200_joint_2, j2n6s200_joint_3,
     j2n6s200_joint_4, j2n6s200_joint_5, j2n6s200_joint_6]
   control_type: velocity
