@@ -2,9 +2,9 @@
   <!-- Load default ADA model -->
   <group>
     <param name="robot_description"
-           textfile="$(find ada_description)/robots/ada_with_camera_forque.urdf"/>
+           textfile="$(find ada_description)/robots/ada.urdf"/>
     <param name="semantic_robot_description"
-           textfile="$(find ada_description)/robots/ada_with_camera_forque.srdf"/>
+           textfile="$(find ada_description)/robots/ada.srdf"/>
   </group>
 
   <node pkg="robot_state_publisher" type="robot_state_publisher" name="state_publisher"/>
