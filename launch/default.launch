@@ -48,11 +48,11 @@
     <!-- static_transform_publisher x y z yaw pitch roll frame_id child_frame_id period_in_ms -->
     <!-- multi view calibration -->
     <node name="st_joule2camera" pkg="tf" type="static_transform_publisher" respawn="false" output="screen"
-          args="0.0986766 -0.00180981 0.020396 0.0763978 0.0133071 -1.56798 j2n6s200_joule camera_link 10"/>
+          args="0.041578 0.0210052 0.0256959 2.88299 3.11726 1.51345 j2n6s200_joule camera_link 10"/>
 
-    <include file="$(find depth_image_proc)/launch/cloudify.launch" />
+    <!-- <include file="$(find depth_image_proc)/launch/cloudify.launch" /> -->
 
-    <node pkg="deep_pose_estimators" type="run_detection.sh" name="deep_pose_estimators_detection" output="screen" />
+    <node pkg="deep_pose_estimators" type="run_detection.sh" name="deep_pose_estimators_detection" output="screen" cwd="node" />
 
   </group>
 
