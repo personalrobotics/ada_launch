@@ -51,10 +51,14 @@
     <!-- <node name="st_joule2camera" pkg="tf" type="static_transform_publisher" respawn="false" output="screen"
           args="0.041578 0.0210052 0.0256959 2.88299 3.11726 1.51345 j2n6s200_joule camera_link 10"/> -->
     <!-- Front Mount -->
+    <!-- <node name="st_joule2camera" pkg="tf" type="static_transform_publisher" respawn="false" output="screen"
+          args="0.0288936 0.0175522 0.00335085 3.06741 -3.12411 1.45708 j2n6s200_joule camera_link 10"/> -->
+    <!-- NIPS Mount -->
+    <!-- <node name="st_joule2camera" pkg="tf" type="static_transform_publisher" respawn="false" output="screen"
+          args="0.050353 0.0302899 0.0290785 2.88836 3.07507 1.58419 j2n6s200_joule camera_link 10"/> -->
+
     <node name="st_joule2camera" pkg="tf" type="static_transform_publisher" respawn="false" output="screen"
-
-
-          args="0.0288936 0.0175522 0.00335085 3.06741 -3.12411 1.45708 j2n6s200_joule camera_link 10"/>
+          args="0.0341357 0.0159739 0.0119214 2.92207 3.12939 1.59377 j2n6s200_joule camera_link 10"/>
 
     <!-- include file="$(find depth_image_proc)/launch/cloudify.launch" / -->
 

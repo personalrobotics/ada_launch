@@ -75,11 +75,11 @@ j2n6s200_hand_controller:
 move_until_touch_topic_controller:
   type: rewd_controllers/MoveUntilTouchTopicController
   # Forque Sensor
-  #forcetorque_wrench_name: /forque/forqueSensor
-  #forcetorque_tare_name: /forque/bias_controller/trigger
+  forcetorque_wrench_name: /forque/forqueSensor
+  forcetorque_tare_name: /forque/bias_controller/trigger
   # FingerVision
-  forcetorque_wrench_name: /fingervision/fv_3_l/wrench
-  forcetorque_tare_name: /fingervision/fingerVisionTaring
+  # forcetorque_wrench_name: /fingervision/fv_3_l/wrench
+  # forcetorque_tare_name: /fingervision/fingerVisionTaring
   sensor_force_limit: 50
   sensor_torque_limit: 5
   joints: [j2n6s200_joint_1, j2n6s200_joint_2, j2n6s200_joint_3,
