@@ -3,9 +3,9 @@
   <arg name="feeding" default="false" doc="Boolean flag of whether to set up the robot for the feeding demo"/>
 
    <!-- the controller node itself -->
-   <node pkg="mico_hardware"
-          name="ros_control_kinova_mico"
-          type="mico_hardware"
+   <node pkg="jaco_hardware"
+          name="ros_control_kinova_jaco"
+          type="jaco_hardware"
           output="screen" />
 
    <!-- load controllers -->
