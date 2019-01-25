@@ -22,8 +22,8 @@
       args="
          --stopped
          move_until_touch_topic_controller
-        trajectory_controller
-        rewd_trajectory_controller
+         trajectory_controller
+         rewd_trajectory_controller
          j2n6s200_hand_controller
          " />
 
@@ -58,7 +58,7 @@
           args="0.050353 0.0302899 0.0290785 2.88836 3.07507 1.58419 j2n6s200_joule camera_link 10"/> -->
 
     <node name="st_joule2camera" pkg="tf" type="static_transform_publisher" respawn="false" output="screen"
-          args="0.0341357 0.0159739 0.0119214 2.92207 3.12939 1.59377 j2n6s200_joule camera_link 10"/>
+          args="0.10909 0.0181061 0.0178372 2.8905 3.13479 1.59224 j2n6s200_joule camera_link 10"/>
 
     <!-- include file="$(find depth_image_proc)/launch/cloudify.launch" / -->
 
