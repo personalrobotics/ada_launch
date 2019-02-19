@@ -44,19 +44,7 @@
     <!-- load ada urdf -->
     <param name="robot_description"
           command="cat $(find ada_description)/robots_urdf/ada_with_camera_forque.urdf"/>
-
-    <!-- static_transform_publisher x y z yaw pitch roll frame_id child_frame_id period_in_ms -->
-    <!-- multi view calibration -->
-    <!-- Top Mount -->
-    <!-- <node name="st_joule2camera" pkg="tf" type="static_transform_publisher" respawn="false" output="screen"
-          args="0.041578 0.0210052 0.0256959 2.88299 3.11726 1.51345 j2n6s200_joule camera_link 10"/> -->
-    <!-- Front Mount -->
-    <!-- <node name="st_joule2camera" pkg="tf" type="static_transform_publisher" respawn="false" output="screen"
-          args="0.0288936 0.0175522 0.00335085 3.06741 -3.12411 1.45708 j2n6s200_joule camera_link 10"/> -->
-    <!-- NIPS Mount -->
-    <!-- <node name="st_joule2camera" pkg="tf" type="static_transform_publisher" respawn="false" output="screen"
-          args="0.050353 0.0302899 0.0290785 2.88836 3.07507 1.58419 j2n6s200_joule camera_link 10"/> -->
-
+    
     <node name="st_joule2camera" pkg="tf" type="static_transform_publisher" respawn="false" output="screen"
           args="0.10909 0.0181061 0.0178372 2.8905 3.13479 1.59224 j2n6s200_joule camera_link 10"/>
 
