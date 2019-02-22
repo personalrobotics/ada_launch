@@ -48,9 +48,8 @@
     <node name="st_joule2camera" pkg="tf" type="static_transform_publisher" respawn="false" output="screen"
           args="0.10909 0.0181061 0.0178372 2.8905 3.13479 1.59224 j2n6s200_joule camera_link 10"/>
 
-    <!-- include file="$(find depth_image_proc)/launch/cloudify.launch" / -->
-
-    <node pkg="deep_pose_estimators" type="run_detection.sh" name="deep_pose_estimators_detection" output="screen" cwd="node" />
+    <node pkg="food_detector" type="run_perception_module.py" name="food_detection"
+          args="--demo-type spnet" output="screen" cwd="node" />
 
   </group>
 
