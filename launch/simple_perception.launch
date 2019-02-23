@@ -25,7 +25,8 @@
     <!-- Simulated pose estimator -->
     <node pkg="deep_pose_estimators"
           name="sim_perception_module"
-          type="run_sim_perception_module.py" />
+          type="run_sim_perception_module.py"
+          output="screen" />
   </group>
 
   <!-- Real Robot -->
