@@ -1,7 +1,7 @@
 <launch>
 
   <arg name="feeding" default="false" doc="Boolean flag of whether to set up the robot for the feeding demo"/>
-  <arg name="perception" default="false" doc="Boolean flag of whether to set up the real perception for the feeding demo"/>
+  <arg name="perception" default="true" doc="Boolean flag of whether to set up the real perception for the feeding demo"/>
 
    <!-- the controller node itself -->
    <node pkg="jaco_hardware"

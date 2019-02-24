@@ -11,8 +11,8 @@ Next, you can run a demo from `ada_demos`, that uses the plain Ada robot without
 ## Launching the robot for the feeding demo
 
 The feeding demo requires some more configuration and some additional nodes.
-It can be started by running `roslaunch ada_launch default.launch feeding:=true perception:=true`.
-To run it with simulated perception `roslaunch ada_launch default.launch feeding:=true`.
+It can be started by running `roslaunch ada_launch default.launch feeding:=true`.
+To run it with simulated perception `roslaunch ada_launch default.launch feeding:=true perception:=false`.
 
 You may also need to start
 - The camera node, running directly on the camera board. Typically the script is called something like `run_all.sh`
