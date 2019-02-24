@@ -41,7 +41,6 @@
   </group>
 
   <group if="$(arg feeding)">
-
     <!-- load ada urdf -->
     <param name="robot_description"
           command="cat $(find ada_description)/robots_urdf/ada_with_camera_forque.urdf"/>
@@ -54,8 +53,6 @@
           args="--demo-type spnet" output="screen" cwd="node" if="$(arg perception)"/>
     <node pkg="food_detector" type="run_sim_food_detector.py" name="food_detector"
           output="screen" cwd="node" unless="$(arg perception)"/>
-
-
   </group>
 
 </launch>
