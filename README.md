@@ -22,3 +22,5 @@ Run `roslaunch ada_launch simple_perception.launch`.
 
 It takes one argument `adareal`, which should be set to `true` if running on the real robot:
 `roslaunch ada_launch simple_perception.launch adareal:=true`
+
+For more information, see the [simple_perception demo in ada_demos](https://github.com/personalrobotics/ada_demos/tree/master/simple_perception).
