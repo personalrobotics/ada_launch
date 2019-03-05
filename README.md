@@ -1,7 +1,5 @@
 # ada_launch
 
-
-
 ## Launching the robot (default setup)
 
 Simply run `roslaunch ada_launch default.launch`.
@@ -17,3 +15,10 @@ You may also need to start
 - The camera node, running directly on the camera board. Typically the script is called something like `run_all.sh`
 - The forque sensor controller, using `roslaunch forque_sensor_hardware forque.launch`
 - The feeding demo parameters, and the feeding demo itself.
+
+## Launching the simple perception demo
+
+Run `roslaunch ada_launch simple_perception.launch`.
+
+It takes one argument `adareal`, which should be set to `true` if running on the real robot:
+`roslaunch ada_launch simple_perception.launch adareal:=true`
