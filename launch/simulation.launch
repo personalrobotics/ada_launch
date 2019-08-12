@@ -19,13 +19,13 @@
 
     <!-- Simulated pose estimators -->
     <node pkg="food_detector"
-          name="sim_food_detector"
+          name="food_detector"
           type="run_sim_food_detector.py"
           output="screen" />
 
     <!-- Simulated pose estimator -->
     <node pkg="food_detector"
-          name="sim_face_detector"
+          name="face_detector"
           type="run_sim_face_detector.py"
           output="screen" />
   </group>
