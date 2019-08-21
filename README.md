@@ -17,6 +17,12 @@ You may also need to start
 - The forque sensor controller, using `roslaunch forque_sensor_hardware forque.launch`
 - The feeding demo parameters, and the feeding demo itself.
 
+## Launching the simulated environment for the feeding demo
+
+Simply run `roslaunch ada_launch simulation.launch`.
+
+This adds mandatory TF trees that the ADA demos are expecting, plus simulated food and face detection.
+
 ## Launching the simple perception demo
 
 Run `roslaunch ada_launch simple_perception.launch`.
