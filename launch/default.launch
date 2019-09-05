@@ -2,6 +2,7 @@
 
   <arg name="feeding" default="false" doc="Boolean flag of whether to set up the robot for the feeding demo"/>
   <arg name="perception" default="true" doc="Boolean flag of whether to set up the real perception for the feeding demo"/>
+  <arg name="detector" default="retinanet" doc="Which network to use for food perception."/>
 
    <!-- the controller node itself -->
    <node pkg="jaco_hardware"
@@ -50,7 +51,7 @@
 
     <!-- start sim/real perception node-->
     <node pkg="food_detector" type="run_perception_module.py" name="food_detector"
-          args="--demo-type spnet" output="screen" cwd="node" if="$(arg perception)"/>
+          args="--demo-type $(arg detector)" output="screen" cwd="node" if="$(arg perception)"/>
     <node pkg="food_detector" type="run_sim_food_detector.py" name="food_detector"
           output="screen" cwd="node" unless="$(arg perception)"/>
   </group>
