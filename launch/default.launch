@@ -2,6 +2,7 @@
 
   <arg name="feeding" default="false" doc="Boolean flag of whether to set up the robot for the feeding demo"/>
   <arg name="perception" default="true" doc="Boolean flag of whether to set up the real perception for the feeding demo"/>
+  <arg name="acquisition_detection" default="false" doc="Boolean flag of whether to set up the acquisition detection for the feeding demo"/>
 
    <!-- the controller node itself -->
    <node pkg="jaco_hardware"
@@ -49,10 +50,16 @@
           args="0.10909 0.0181061 0.0178372 2.8905 3.13479 1.59224 j2n6s200_joule camera_link 10"/>
 
     <!-- start sim/real perception node-->
-    <node pkg="food_detector" type="run_perception_module.py" name="food_detector"
-          args="--demo-type spnet" output="screen" cwd="node" if="$(arg perception)"/>
-    <node pkg="food_detector" type="run_sim_food_detector.py" name="food_detector"
-          output="screen" cwd="node" unless="$(arg perception)"/>
+    <group if="$(arg perception)">
+      <node pkg="food_detector" type="run_perception_module.py" name="food_detector"
+            args="--demo-type spnet" output="screen" cwd="node"/>
+      <node pkg="ada_demos" type="acquisition_detector.py" name="acqusition_detector"
+            if="$(arg acquisition_detection)"/>
+    </group>
+    <group unless="$(arg perception)">
+      <node pkg="food_detector" type="run_sim_food_detector.py" name="food_detector"
+            output="screen" cwd="node"/>
+    </group>
   </group>
 
 </launch>
