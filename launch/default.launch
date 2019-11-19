@@ -45,8 +45,8 @@
     <param name="robot_description"
           command="cat $(find ada_description)/robots_urdf/ada_with_camera_forque.urdf"/>
 
-    <node name="st_joule2camera" pkg="tf" type="static_transform_publisher" respawn="false" output="screen"
-          args="0.10909 0.0181061 0.0178372 2.8905 3.13479 1.59224 j2n6s200_joule camera_link 10"/>
+    <node name="st_camera2joule" pkg="tf" type="static_transform_publisher" respawn="false" output="screen"
+          args="0.0973202 0.0290084 -0.0034991 2.86143 3.13026 1.56368 j2n6s200_joule camera_link 10"/>
 
     <!-- start sim/real perception node-->
     <node pkg="food_detector" type="run_perception_module.py" name="food_detector"
