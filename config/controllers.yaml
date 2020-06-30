@@ -106,4 +106,10 @@ move_until_touch_topic_controller:
     j2n6s200_joint_5: {p: 3,  d: 0, i: 0, i_clamp: 1}
     j2n6s200_joint_6: {p: 3,  d: 0, i: 0, i_clamp: 1}
 
-
+move_until_touch_cartvel_controller:
+  type: rewd_controllers/MoveUntilTouchCartVelocityController
+  # Forque Sensor
+  forcetorque_wrench_name: /forque/forqueSensor
+  forcetorque_tare_name: /forque/bias_controller/trigger
+  sensor_force_limit: 50
+  sensor_torque_limit: 5
