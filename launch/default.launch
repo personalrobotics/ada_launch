@@ -27,6 +27,7 @@
          rewd_trajectory_controller
          j2n6s200_hand_controller
          move_until_touch_cartvel_controller
+         cartvel_controller
          " />
 
    <node pkg="robot_state_publisher" type="robot_state_publisher" name="rob_st_pub" />

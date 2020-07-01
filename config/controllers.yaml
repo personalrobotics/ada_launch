@@ -108,8 +108,13 @@ move_until_touch_topic_controller:
 
 move_until_touch_cartvel_controller:
   type: rewd_controllers/MoveUntilTouchCartVelocityController
+  enableFT: true
   # Forque Sensor
   forcetorque_wrench_name: /forque/forqueSensor
   forcetorque_tare_name: /forque/bias_controller/trigger
   sensor_force_limit: 50
   sensor_torque_limit: 5
+
+cartvel_controller:
+  type: rewd_controllers/MoveUntilTouchCartVelocityController
+  enableFT: false
