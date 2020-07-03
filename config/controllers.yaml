@@ -108,6 +108,9 @@ move_until_touch_topic_controller:
 
 move_until_touch_cartvel_controller:
   type: rewd_controllers/MoveUntilTouchCartVelocityController
+  ee: j2n6s200_end_effector
+  joints: [j2n6s200_joint_1, j2n6s200_joint_2, j2n6s200_joint_3,
+    j2n6s200_joint_4, j2n6s200_joint_5, j2n6s200_joint_6]
   enableFT: true
   # Forque Sensor
   forcetorque_wrench_name: /forque/forqueSensor
@@ -117,4 +120,7 @@ move_until_touch_cartvel_controller:
 
 cartvel_controller:
   type: rewd_controllers/MoveUntilTouchCartVelocityController
+  ee: j2n6s200_end_effector
+  joints: [j2n6s200_joint_1, j2n6s200_joint_2, j2n6s200_joint_3,
+    j2n6s200_joint_4, j2n6s200_joint_5, j2n6s200_joint_6]
   enableFT: false
