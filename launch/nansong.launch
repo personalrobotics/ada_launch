@@ -1,0 +1,8 @@
+
+<launch>
+      <node name="st_map2camera_color_optical_frame" pkg="tf" type="static_transform_publisher" respawn="false" 
+      output="screen" args="0.287, -0.367, 0.576 0.006, 0.992, 0.126, 0.018 map camera_color_optical_frame 10"/>
+      <node name="st_base2map" pkg="tf" type="static_transform_publisher" respawn="false" 
+      output="screen" args="0 0 0 0 0 0 1 j2n6s200_link_base map 10"/>
+</launch>
+
