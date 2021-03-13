@@ -1,0 +1,12 @@
+# Should be loaded into ns="gazebo_ros_control", as expected by Gazebo.
+# These params are required for the velocity hardware_interface, and are copied
+# from controllers.yaml.
+pid_gains:
+  j2n6s200_joint_1: {p: 3,  d: 0, i: 0, i_clamp: 1}
+  j2n6s200_joint_2: {p: 3,  d: 0, i: 0, i_clamp: 1}
+  j2n6s200_joint_3: {p: 3,  d: 0, i: 0, i_clamp: 1}
+  j2n6s200_joint_4: {p: 3,  d: 0, i: 0, i_clamp: 1}
+  j2n6s200_joint_5: {p: 3,  d: 0, i: 0, i_clamp: 1}
+  j2n6s200_joint_6: {p: 3,  d: 0, i: 0, i_clamp: 1}
+  # j2n6s200_joint_finger_1: {p: 1,  d: 0, i: 0, i_clamp: 1}
+  # j2n6s200_joint_finger_2: {p: 1,  d: 0, i: 0, i_clamp: 1}
